@@ -1,0 +1,66 @@
+{
+  "name": "@tawasukha/rbac",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tawasukha/rbac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tawasukha/rbac/issues"
+  },
+  "author": "Forte Zhuo",
+  "main": "dist/index.js",
+  "module": "dist/rbac.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "size-limit": [
+    {
+      "path": "dist/rbac.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/rbac.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.0",
+    "dts-cli": "^1.6.3",
+    "husky": "^8.0.3",
+    "size-limit": "^8.2.4",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
