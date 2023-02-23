@@ -1,6 +1,6 @@
 import { RoleAccess, RoleListAccess } from "./type"
 import { _can, _getAllRoles, flatten, memo } from "./util"
-export { Permission, Access, RoleAccess, RoleListAccess } from "./type"
+export { Permission, Access, RoleAccess, RoleListAccess, Action } from "./type"
 
 export class RBAC {
     protected roleAccess: RoleAccess[] = []
