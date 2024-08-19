@@ -1,19 +1,19 @@
-export type Action = "read" | "save" | "delete" | "view" | "all"
+export type Action = 'create' | 'read' | 'save' | 'delete' | 'view' | 'all';
 
 export type Permission = {
-    granted: boolean
-    access?: RoleAccess
-}
+  granted: boolean;
+  access?: RoleAccess;
+};
 
 export type Access = {
-    on: string
-    can: Action[]
-}
+  on: string;
+  can: Action[];
+};
 
 export type RoleListAccess = {
-    role: string
-    inherit: string[]
-    access: Access[]
-}
+  role: string;
+  inherit: string[];
+  access: Access[];
+};
 
-export type RoleAccess = Partial<Access> & { role: string; inherit: string[] }
+export type RoleAccess = Partial<Access> & { role: string; inherit: string[] };
